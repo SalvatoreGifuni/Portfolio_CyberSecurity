@@ -3,8 +3,7 @@
 Questo portfolio raccoglie tutti i progetti che ho realizzato in ambito **CyberSecurity** per studio durante il bootcamp di **Epicode**. Include anche le mie **competenze**, alcuni **certificati** rilevanti e viene aggiornato regolarmente.
 
 Per saperne di più: 
-🔗 GitHub [https://github.com/SalvatoreGifuni]
-🔗 LinkedIn: [linkedin.com/in/tuoProfilo]  
+🔗 [GitHub](https://github.com/SalvatoreGifuni)
 
 ---
 
@@ -15,18 +14,31 @@ Per saperne di più:
 
 Configurazione di rete segmentata su tre livelli tramite VLAN per migliorare sicurezza, gestione e organizzazione in un negozio di arredamento. Implementate 4 VLAN dedicate a magazzino, progettazione, segreteria e amministrazione su Cisco Packet Tracer. Test di rete (ping/ARP) confermano isolamento e corretta comunicazione. Rete scalabile e pronta per DHCP.
 
-### 🔸 Analisi dei Carrelli di Instacart
-> _INSERISCI QUI la descrizione del progetto_
+---
+
+<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/2.png?raw=true"> 🔸 
+**[Analisi di Codice e Debug di un’Interfaccia Virtuale in Python](https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj2_AnalisiPython)**
+
+Analisi e correzione di un assistente virtuale testuale scritto in Python. Identificati e risolti errori sintattici (es. uso scorretto di metodi `datetime`) e logici (gestione input rigida).  
+Proposte ottimizzazioni per migliorare l’usabilità: input flessibili, menù guida, modularità del codice con dizionari e funzioni. Output migliorato per una UX più chiara e scalabile.
 
 ---
 
-### 🔸 Motore di Raccomandazione di Articoli di Notizie (ibrido)
-> _INSERISCI QUI la descrizione del progetto_
+<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/3.png?raw=true"> 🔸 
+**[Simulazione Firewall con Pfsense su VirtualBox](https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj3_Pfsense)**
+
+Simulazione di ambiente di rete su VirtualBox con Kali Linux, Metasploitable2 e Pfsense.  
+Configurata regola firewall per bloccare l’accesso alla DVWA e impedire lo scan porte tra due subnet isolate.  
+Verificata l’efficacia tramite test di rete e browser. Progetto utile per comprendere la segmentazione e il controllo del traffico in contesti reali.
 
 ---
 
-### 🔸 Manutenzione Predittiva di Motori Aeronautici
-> _INSERISCI QUI la descrizione del progetto_
+<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/3.png?raw=true"> 🔸
+**[Simulazione spear phishing con ChatGPT e SEToolkit](https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj4_EmailPhishing)**
+
+Simulazione di un attacco di spear phishing a un’azienda fittizia tramite email generate con ChatGPT, differenziate per ruolo aziendale (dirigenza e staff operativo).  
+I messaggi, inviati da un account HR compromesso, indirizzavano a una falsa pagina login realizzata manualmente in HTML e integrata in SEToolkit su Kali Linux.  
+L'obiettivo era raccogliere credenziali in un ambiente controllato, valutando l’efficacia dell’ingegneria sociale. Il progetto include anche un report tecnico dettagliato.
 
 ---
 
