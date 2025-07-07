@@ -1,6 +1,6 @@
 # 📊 Portfolio_CyberSecurity Specialist Jr_Salvatore Gifuni
 
-Questo portfolio raccoglie tutti i progetti che ho realizzato in ambito **CyberSecurity** per studio durante il bootcamp di **Epicode**. Include anche le mie **competenze**, alcuni **certificati** rilevanti e viene aggiornato regolarmente.
+Questo portfolio raccoglie tutti i progetti che ho realizzato in ambito **CyberSecurity** per studio durante il bootcamp di **Epicode**.
 
 Per saperne di più: 
 🔗 [GitHub](https://github.com/SalvatoreGifuni)
