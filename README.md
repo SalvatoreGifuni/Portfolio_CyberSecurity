@@ -10,23 +10,9 @@ Per saperne di più:
 
 ## 📂 Progetti Principali
 
-### [🔸Progettazione e Configurazione di Rete VLAN Multi-Livello in un Ambiente Commerciale] (https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj1_VLAN)
+<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/1.png?raw=true"> 🔸**[Progettazione e Configurazione di Rete VLAN Multi-Livello in un Ambiente Commerciale] (https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj1_VLAN)**
 
-<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/1.png?raw=true">
-
-Progetto di configurazione di una rete segmentata all’interno di un negozio di arredamento distribuito su tre livelli, ognuno con funzioni distinte come magazzino, segreteria, progettazione e amministrazione.
-L’architettura si basa su 4 VLAN dedicate, implementate su Cisco Packet Tracer, con l’obiettivo di:
-
-Migliorare la sicurezza e l’efficienza del traffico di rete
-
-Ridurre i costi di cablaggio attraverso una struttura distribuita
-
-Ottimizzare la gestione delle postazioni e l’organizzazione del personale
-
-Sono state configurate porte access per gli end device e porte trunk per la comunicazione tra switch, garantendo l’isolamento logico tra reparti e l’efficienza del sistema.
-I test di rete (ping e ARP) hanno dimostrato il corretto isolamento tra VLAN e la funzionalità della rete.
-
-Progetto scalabile, facilmente manutenibile, e predisposto per futuri upgrade come l’integrazione di un server DHCP.
+Configurazione di rete segmentata su tre livelli tramite VLAN per migliorare sicurezza, gestione e organizzazione in un negozio di arredamento. Implementate 4 VLAN dedicate a magazzino, progettazione, segreteria e amministrazione su Cisco Packet Tracer. Test di rete (ping/ARP) confermano isolamento e corretta comunicazione. Rete scalabile e pronta per DHCP.
 
 ### 🔸 Analisi dei Carrelli di Instacart
 > _INSERISCI QUI la descrizione del progetto_
