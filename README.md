@@ -17,7 +17,7 @@ Ho configurato una rete divisa in tre livelli usando VLAN per migliorare la sicu
 
 <img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/2.png?raw=true"> 🔸 **[Analisi di Codice e Debug di un’Interfaccia Virtuale in Python](https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj2_AnalisiPython)**
 
-Ho analizzato e corretto un assistente virtuale testuale scritto in Python. Ho risolto errori nel codice, come l’uso sbagliato di alcune funzioni per la data e problemi nella gestione degli input che erano troppo rigidi. Ho poi suggerito miglioramenti per rendere l’assistente più facile da usare, come permettere input più flessibili, aggiungere un menù di guida e riorganizzare il codice usando funzioni e dizionari. Inoltre, ho migliorato i messaggi mostrati all’utente per rendere l’esperienza più chiara e facile da scalare.
+Ho analizzato e corretto un assistente virtuale testuale scritto in Python. Ho risolto errori nel codice, come l’uso sbagliato di alcune funzioni per la data e problemi nella gestione degli input, troppo rigidi. Ho poi suggerito miglioramenti per rendere l’assistente più facile da usare, come permettere input più flessibili, aggiungere un menù di guida e riorganizzare il codice usando funzioni e dizionari. Inoltre, ho migliorato i messaggi mostrati all’utente per rendere l’esperienza più chiara e facile da scalare.
 
 ---
 
