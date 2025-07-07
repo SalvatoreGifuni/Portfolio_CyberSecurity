@@ -1,4 +1,4 @@
-# 📊 Portfolio CyberSecurity Specialist Jr – Salvatore Gifuni
+# 📊 Portfolio_CyberSecurity Specialist Jr_Salvatore Gifuni
 
 Questo portfolio raccoglie tutti i progetti che ho realizzato in ambito **CyberSecurity** per studio durante il bootcamp di **Epicode**. Include anche le mie **competenze**, alcuni **certificati** rilevanti e viene aggiornato regolarmente.
 
@@ -40,8 +40,12 @@ Simulazione di un attacco di spear phishing a un’azienda fittizia tramite emai
 
 ---
 
-### 🔸 Stima della Curva di Potenza delle Turbine Eoliche
-> _INSERISCI QUI la descrizione del progetto_
+<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/5.png?raw=true"> 🔸
+
+**[Hydra SSH/FTP Brute-Force | Sides-Vancouver-2018 Exploitation](https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj5_Hydra_BlaxBox_SidesVancouver)**
+
+Attacco a dizionario con Hydra su servizi SSH e FTP configurati manualmente, con focus su wordlist, tempi e contromisure. |
+Accesso root a VM vulnerabile tramite FTP anonimo, exploit su WordPress e privilege escalation via cronjob.
 
 ---
 
