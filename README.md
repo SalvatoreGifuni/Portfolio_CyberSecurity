@@ -10,7 +10,8 @@ Per saperne di più:
 
 ## 📂 Progetti Principali
 
-<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/1.png?raw=true"> 🔸**[Progettazione e Configurazione di Rete VLAN Multi-Livello in un Ambiente Commerciale] (https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj1_VLAN)**
+<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/1.png?raw=true"> 🔸
+**[Progettazione e Configurazione di Rete VLAN Multi-Livello in un Ambiente Commerciale](https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj1_VLAN)**
 
 Configurazione di rete segmentata su tre livelli tramite VLAN per migliorare sicurezza, gestione e organizzazione in un negozio di arredamento. Implementate 4 VLAN dedicate a magazzino, progettazione, segreteria e amministrazione su Cisco Packet Tracer. Test di rete (ping/ARP) confermano isolamento e corretta comunicazione. Rete scalabile e pronta per DHCP.
 
