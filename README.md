@@ -36,9 +36,7 @@ Verificata l’efficacia tramite test di rete e browser. Progetto utile per comp
 <img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/4.png?raw=true"> 🔸
 **[Simulazione spear phishing con ChatGPT e SEToolkit](https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj4_EmailPhishing)**
 
-Simulazione di un attacco di spear phishing a un’azienda fittizia tramite email generate con ChatGPT, differenziate per ruolo aziendale (dirigenza e staff operativo).  
-I messaggi, inviati da un account HR compromesso, indirizzavano a una falsa pagina login realizzata manualmente in HTML e integrata in SEToolkit su Kali Linux.  
-L'obiettivo era raccogliere credenziali in un ambiente controllato, valutando l’efficacia dell’ingegneria sociale. Il progetto include anche un report tecnico dettagliato.
+Simulazione di un attacco di spear phishing a un’azienda fittizia tramite email generate con ChatGPT, differenziate per ruolo aziendale (dirigenza e staff operativo). I messaggi, inviati da un account HR compromesso, indirizzavano a una falsa pagina login realizzata manualmente in HTML e integrata in SEToolkit su Kali Linux. L'obiettivo era raccogliere credenziali in un ambiente controllato, valutando l’efficacia dell’ingegneria sociale. Il progetto include anche un report tecnico dettagliato.
 
 ---
 
