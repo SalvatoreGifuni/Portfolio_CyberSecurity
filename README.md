@@ -60,7 +60,7 @@ Ho creato gruppi utenti (ProjectManager e Designer) e assegnato permessi specifi
 
 <img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/9.png?raw=true">🔸 **[Analisi PowerShell | Analisi Malware | Nmap | SQL Injection](https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj9_PowerShell_Nmap_AnyRun_SQLi)**
 
-Ho imparato a usare PowerShell per gestire comandi e automatizzare attività. | Ho analizzato un malware dropper su ANY.RUN, osservando come usa tecniche avanzate per evitare il rilevamento. | Ho esplorato e scansionato reti usando Nmap per capire meglio la struttura e i dispositivi connessi. | Ho identificato e analizzato un attacco SQL Injection tramite Wireshark, studiando come avviene e come difendersi.
+Ho usato PowerShell per gestire comandi e automatizzare attività | Ho analizzato un malware dropper su ANY.RUN, osservando come usa tecniche avanzate per evitare il rilevamento | Ho esplorato e scansionato reti usando Nmap per capire meglio la struttura e i dispositivi connessi | Ho identificato e analizzato un attacco SQL Injection tramite Wireshark, studiando come avviene e come difendersi.
 
 ---
 
