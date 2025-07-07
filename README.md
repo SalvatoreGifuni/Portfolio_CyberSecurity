@@ -33,7 +33,7 @@ Verificata l’efficacia tramite test di rete e browser. Progetto utile per comp
 
 ---
 
-<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/3.png?raw=true"> 🔸
+<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/4.png?raw=true"> 🔸
 **[Simulazione spear phishing con ChatGPT e SEToolkit](https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj4_EmailPhishing)**
 
 Simulazione di un attacco di spear phishing a un’azienda fittizia tramite email generate con ChatGPT, differenziate per ruolo aziendale (dirigenza e staff operativo).  
