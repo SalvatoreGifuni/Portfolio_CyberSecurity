@@ -2,7 +2,11 @@
 
 Questo portfolio raccoglie tutti i progetti che ho realizzato in ambito **CyberSecurity** per studio durante il bootcamp di **Epicode**.
 
-Per saperne di più: 
+Certificazioni Epicode:
+🔗 [Certificato finale]([https://github.com/SalvatoreGifuni](https://github.com/SalvatoreGifuni/EPICODE_CS0225IT_CERT/blob/main/EPICODE_CS0225IT_CERT/652696cd-f9c9-416d-a2b8-6ba49db3a51c.pdf))
+🔗 [Certificati superamento moduli](https://github.com/SalvatoreGifuni/EPICODE_CS0225IT_CERT/tree/main/EPICODE_CS0225IT_CERT)
+
+Per saperne di più su di me: 
 🔗 [GitHub](https://github.com/SalvatoreGifuni)
 
 ---
