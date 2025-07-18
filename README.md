@@ -25,7 +25,7 @@ Ho analizzato e corretto un assistente virtuale testuale scritto in Python. Ho r
 
 ---
 
-<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/blob/main/images/3.png?raw=true"> 🔸 **[Simulazione Firewall con Pfsense su VirtualBox](https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/tree/main/EPICODE_CS0225IT_PROJ/Proj3_Pfsense)**
+<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/blob/main/images/3.png?raw=true"> 🔸 **[Simulazione Firewall con Pfsense su VirtualBox](https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/tree/main/EPICODE_CS0225IT_PROJ/Proj3_PfSense)**
 
 Ho creato un ambiente di rete virtuale usando VirtualBox con Kali Linux, Metasploitable2 e Pfsense. Ho configurato una regola nel firewall per bloccare l’accesso a un’applicazione web vulnerabile (DVWA) e impedire la scansione delle porte tra due reti separate. Ho verificato che tutto funzionasse correttamente con test di rete e navigazione web. Questo progetto aiuta a capire come dividere una rete in parti separate e controllare il traffico per aumentare la sicurezza in situazioni reali.
 
