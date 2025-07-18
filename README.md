@@ -4,7 +4,7 @@ Questo portfolio raccoglie tutti i progetti che ho realizzato in ambito **CyberS
 
 Certificazioni Epicode:  
 🔗 [Certificato finale](https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/blob/main/EPICODE_CS0225IT_CERT/Certificato_Finale/652696cd-f9c9-416d-a2b8-6ba49db3a51c.pdf)  
-🔗 [Certificati superamento moduli](https://github.com/SalvatoreGifuni/SalvatoreGifuni/Portfolio_CyberSecurity/blob/main/EPICODE_CS0225IT_CERT/tree/EPICODE_CS0225IT_CERT)
+🔗 [Certificati superamento moduli](https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/tree/main/EPICODE_CS0225IT_CERT/EPICODE_CS0225IT_CERT)
 
 Per saperne di più su di me: 
 🔗 [GitHub](https://github.com/SalvatoreGifuni)
