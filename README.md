@@ -50,7 +50,7 @@ Ho eseguito un attacco di tipo RCE (Remote Code Execution) su un servizio Java R
 
 ---
 
-<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/blob/main/images/7.png?raw=true">🔸 **[Analisi traffico con Wireshark | TCP Scan & Indicatori di Compromissione](https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/tree/main/EPICODE_CS0225IT_PROJ/Proj7_Wireshark)**
+<img align="left" width="250" height="150" src="https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/blob/main/images/7.png?raw=true">🔸 **[Analisi traffico con Wireshark | TCP Scan & Indicatori di Compromissione](https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/tree/main/EPICODE_CS0225IT_PROJ/Proj7_wireshark)**
 
 Ho analizzato una cattura di traffico di rete per individuare segnali di attività sospette. Ho rilevato una scansione TCP completa con sequenze di pacchetti tipiche (SYN → SYN-ACK → RST), ricostruendo così le possibili vie di attacco. Infine, ho suggerito misure per ridurre i rischi e prevenire futuri tentativi.
 
