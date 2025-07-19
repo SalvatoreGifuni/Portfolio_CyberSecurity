@@ -1,252 +1,176 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <title>Portfolio CyberSecurity – Salvatore Gifuni</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow-x: hidden;
-      background-color: #0a0a1a; /* blu scurissimo */
-      color: #e0e0f5;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    /* canvas Matrix */
-    #matrix {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      width: 100%;
-      height: 100%;
-      background: #0a0a1a;
-      opacity: 0.18; /* più leggero */
-    }
-
-    /* contenitore principale */
-    .content {
-      position: relative;
-      z-index: 2;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 30px;
-      background: rgba(10, 10, 26, 0.85);
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(138,43,226,0.4);
-    }
-
-    h1, h2 {
-      font-family: 'Fira Code', monospace;
-      color: #9d4edd; /* viola Epicode */
-      text-shadow: 0 0 10px #6c63ff;
-    }
-
-    h1 {
-      position: relative;
-      display: inline-block;
-    }
-    h1::before, h1::after {
-      content: attr(data-text);
-      position: absolute;
-      left: 0;
-      width: 100%;
-      overflow: hidden;
-      clip: rect(0, 900px, 0, 0);
-    }
-    h1::before {
-      animation: glitchTop 2s infinite linear alternate-reverse;
-      color: #ff4edb; /* fucsia */
-      text-shadow: 0 0 8px #ff4edb;
-    }
-    h1::after {
-      animation: glitchBottom 1.5s infinite linear alternate-reverse;
-      color: #6c63ff; /* blu/viola */
-      text-shadow: 0 0 8px #6c63ff;
-    }
-    @keyframes glitchTop {
-      0% { clip: rect(0,9999px,0,0); }
-      20% { clip: rect(0,9999px,8px,0); }
-      40% { clip: rect(0,9999px,6px,0); }
-      60% { clip: rect(0,9999px,12px,0); }
-      80% { clip: rect(0,9999px,4px,0); }
-      100% { clip: rect(0,9999px,5px,0); }
-    }
-    @keyframes glitchBottom {
-      0% { clip: rect(0,9999px,0,0); }
-      20% { clip: rect(0,9999px,6px,0); }
-      40% { clip: rect(0,9999px,10px,0); }
-      60% { clip: rect(0,9999px,5px,0); }
-      80% { clip: rect(0,9999px,7px,0); }
-      100% { clip: rect(0,9999px,3px,0); }
-    }
-
-    img {
-      float: left;
-      margin-right: 15px;
-      margin-bottom: 10px;
-      border-radius: 6px;
-      box-shadow: 0 0 12px #6c63ff;
-      transition: transform 0.3s;
-    }
-    img:hover {
-      transform: scale(1.05);
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      margin-bottom: 25px;
-      clear: both;
-      background: rgba(255,255,255,0.03);
-      padding: 15px;
-      border-radius: 8px;
-      border-left: 3px solid #9d4edd;
-      box-shadow: 0 0 8px #6c63ff;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    li:hover {
-      transform: translateX(8px) scale(1.02);
-      box-shadow: 0 0 15px #ff4edb;
-    }
-
-    a {
-      color: #6c63ff;
-      text-decoration: none;
-      font-family: 'Fira Code', monospace;
-    }
-    a:hover {
-      color: #ff4edb;
-      text-shadow: 0 0 5px #ff4edb;
-    }
-
-    hr {
-      margin: 40px 0;
-      border: none;
-      border-top: 1px solid #9d4edd;
-      box-shadow: 0 0 6px #6c63ff;
-    }
-
-    footer {
-      margin-top: 50px;
-      font-family: 'Fira Code', monospace;
-      font-size: 0.9em;
-      color: #9d4edd;
-      border-top: 1px dashed #6c63ff;
-      padding-top: 10px;
-      text-align: center;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio CyberSecurity – Salvatore Gifuni</title>
+<style>
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(135deg,#0a0a26,#1a1a40);
+  color:#f0f0f0;
+}
+h1 {
+  text-align:center;
+  font-size:2.5rem;
+  margin:30px 0;
+  color:#a78bfa;
+  text-shadow:0 0 5px #ff00ff,0 0 10px #a78bfa;
+}
+.container {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+  padding:20px;
+  max-width:1400px;
+  margin:auto;
+}
+.card {
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:12px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+  transition:transform 0.3s,box-shadow 0.3s;
+}
+.card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.5);
+}
+.card img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+.card-content {
+  padding:15px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+.card-content h3 {
+  font-size:1.1rem;
+  margin:0 0 10px;
+  color:#c084fc;
+}
+.card-content p {
+  font-size:0.9rem;
+  color:#ddd;
+  flex:1;
+}
+.card-content a {
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 12px;
+  background:#6d28d9;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+  text-align:center;
+  transition:background 0.3s;
+}
+.card-content a:hover {
+  background:#9333ea;
+}
+footer {
+  text-align:center;
+  padding:20px;
+  font-size:0.9rem;
+  color:#aaa;
+}
+</style>
 </head>
 <body>
-  <canvas id="matrix"></canvas>
+<h1>Portfolio CyberSecurity – Salvatore Gifuni</h1>
 
-  <div class="content">
-    <h1 data-text="📊 Portfolio CyberSecurity Specialist – Salvatore Gifuni">
-      📊 Portfolio CyberSecurity Specialist – Salvatore Gifuni
-    </h1>
+<div class="container">
 
-    <p>Questo portfolio raccoglie tutti i progetti che ho realizzato in ambito <strong>CyberSecurity</strong> durante il bootcamp di <strong>Epicode</strong>.</p>
-
-    <p><strong>📚 Certificazioni Epicode:</strong><br>
-      🔗 <a href="https://github.com/SalvatoreGifuni/Portfolio/blob/main/EPICODE_CS0225IT_CERT/Certificato_Finale/652696cd-f9c9-416d-a2b8-6ba49db3a51c.pdf" target="_blank" rel="noopener noreferrer">Certificato finale</a><br>
-      🔗 <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_CERT/EPICODE_CS0225IT_CERT" target="_blank" rel="noopener noreferrer">Certificati singoli moduli</a>
-    </p>
-
-    <hr>
-
-    <p><strong>👤 Per saperne di più su di me:</strong><br>
-      🔗 <a href="https://github.com/SalvatoreGifuni" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </p>
-
-    <p><strong>💼 Guarda anche:</strong><br>
-      🔗 <a href="https://salvatoregifuni.github.io/Portfolio_DataEng/" target="_blank" rel="noopener noreferrer">Portfolio Data Engineering – Salvatore Gifuni</a>
-    </p>
-
-    <hr>
-
-    <h2>📂 Progetti Principali</h2>
-
-    <ul>
-      <li>
-        <img src="images/1.png" width="250" height="150" alt="Progettazione e Configurazione VLAN" />
-        <strong><a href="EPICODE_CS0225IT_PROJ/Proj1_VLAN" target="_blank" rel="noopener noreferrer">Progettazione e Configurazione di Rete VLAN Multi-Livello</a></strong><br />
-        Configurazione di rete divisa in tre livelli per un ambiente commerciale usando VLAN, isolamento e comunicazione mirata con Cisco Packet Tracer.
-      </li>
-      <li>
-        <img src="images/2.png" width="250" height="150" alt="Analisi di Codice Python" />
-        <strong><a href="EPICODE_CS0225IT_PROJ/Proj2_AnalisiPython" target="_blank" rel="noopener noreferrer">Analisi di Codice e Debug di un’Interfaccia Virtuale in Python</a></strong><br />
-        Debug e miglioramento dell’interfaccia assistente virtuale con input più flessibili, guida utente e ristrutturazione del codice.
-      </li>
-      <li>
-        <img src="images/3.png" width="250" height="150" alt="Simulazione Firewall con Pfsense" />
-        <strong><a href="EPICODE_CS0225IT_PROJ/Proj3_PfSense" target="_blank" rel="noopener noreferrer">Simulazione Firewall con Pfsense su VirtualBox</a></strong><br />
-        Regole firewall per protezione di DVWA e scansioni di rete tra macchine Kali, Metasploitable e Pfsense.
-      </li>
-      <li>
-        <img src="images/4.png" width="250" height="150" alt="Laboratorio Pentesting con Kali Linux" />
-        <strong><a href="EPICODE_CS0225IT_PROJ/Proj4_Pentest_Kali" target="_blank" rel="noopener noreferrer">Laboratorio di Pentesting con Kali Linux e DVWA</a></strong><br />
-        Uso di strumenti Kali per testare vulnerabilità su DVWA, analisi vulnerabilità e gestione dei risultati.
-      </li>
-      <li>
-        <img src="images/5.png" width="250" height="150" alt="Attacco Wi-Fi con Airgeddon" />
-        <strong><a href="EPICODE_CS0225IT_PROJ/Proj5_Airgeddon" target="_blank" rel="noopener noreferrer">Attacco Wi-Fi con Airgeddon</a></strong><br />
-        Scansione, attacco e cattura handshake WPA2 in ambiente Kali Linux.
-      </li>
-      <li>
-        <img src="images/6.png" width="250" height="150" alt="Report di Vulnerabilità e Presentazione" />
-        <strong><a href="EPICODE_CS0225IT_PROJ/Proj6_VulnerabilityReport" target="_blank" rel="noopener noreferrer">Report di Vulnerabilità e Presentazione</a></strong><br />
-        Report completo di vulnerabilità scoperte e presentazione formale del progetto.
-      </li>
-    </ul>
-
-    <hr>
-
-    <footer>
-      © 2025 Salvatore Gifuni – Portfolio CyberSecurity – Tutti i diritti riservati
-    </footer>
+  <div class="card">
+    <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/1.png?raw=true" alt="">
+    <div class="card-content">
+      <h3>Progettazione VLAN Multi-Livello</h3>
+      <p>Configurazione rete a più livelli con VLAN in un ambiente commerciale su Cisco Packet Tracer.</p>
+      <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj1_VLAN" target="_blank">Guarda progetto</a>
+    </div>
   </div>
 
-  <script>
-    // Effetto Matrix sul canvas
-    const canvas = document.getElementById('matrix');
-    const ctx = canvas.getContext('2d');
+  <div class="card">
+    <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/2.png?raw=true" alt="">
+    <div class="card-content">
+      <h3>Analisi Codice Python</h3>
+      <p>Debug e miglioramenti di un assistente virtuale testuale scritto in Python.</p>
+      <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj2_AnalisiPython" target="_blank">Guarda progetto</a>
+    </div>
+  </div>
 
-    let width = canvas.width = window.innerWidth;
-    let height = canvas.height = window.innerHeight;
+  <div class="card">
+    <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/3.png?raw=true" alt="">
+    <div class="card-content">
+      <h3>Firewall con Pfsense</h3>
+      <p>Simulazione firewall tra reti virtuali su VirtualBox, blocco DVWA e scansioni.</p>
+      <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj3_PfSense" target="_blank">Guarda progetto</a>
+    </div>
+  </div>
 
-    const letters = '0123456789ABCDEF@#$%^&*()*&^%'.split('');
-    const fontSize = 18;
-    const columns = Math.floor(width / fontSize);
-    const drops = new Array(columns).fill(1);
+  <div class="card">
+    <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/4.png?raw=true" alt="">
+    <div class="card-content">
+      <h3>Spear Phishing con ChatGPT</h3>
+      <p>Attacco simulato con email mirate e falsa pagina di login, ambiente sicuro.</p>
+      <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj4_EmailPhishing" target="_blank">Guarda progetto</a>
+    </div>
+  </div>
 
-    function draw() {
-      ctx.fillStyle = 'rgba(10, 10, 26, 0.1)';
-      ctx.fillRect(0, 0, width, height);
+  <div class="card">
+    <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/5.png?raw=true" alt="">
+    <div class="card-content">
+      <h3>Hydra SSH/FTP & Exploit</h3>
+      <p>Brute-force su SSH/FTP e exploit su WordPress per escalation privilegi.</p>
+      <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj5_Hydra_BlaxBox_SidesVancouver" target="_blank">Guarda progetto</a>
+    </div>
+  </div>
 
-      ctx.fillStyle = '#6c63ff';
-      ctx.font = fontSize + 'px monospace';
+  <div class="card">
+    <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/6.png?raw=true" alt="">
+    <div class="card-content">
+      <h3>Java RMI Exploit</h3>
+      <p>Attacco RCE su servizio RMI, sessione Meterpreter e raccolta informazioni.</p>
+      <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj6_Metasploit" target="_blank">Guarda progetto</a>
+    </div>
+  </div>
 
-      for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+  <div class="card">
+    <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/7.png?raw=true" alt="">
+    <div class="card-content">
+      <h3>Analisi Traffico Wireshark</h3>
+      <p>Rilevamento TCP scan e indicatori di compromissione su cattura rete.</p>
+      <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj7_wireshark" target="_blank">Guarda progetto</a>
+    </div>
+  </div>
 
-        if (drops[i] * fontSize > height && Math.random() > 0.975) drops[i] = 0;
-        drops[i]++;
-      }
-    }
+  <div class="card">
+    <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/8.png?raw=true" alt="">
+    <div class="card-content">
+      <h3>Gestione Utenti e GPO</h3>
+      <p>Gestione utenti, permessi e policy su Windows Server 2022 con Active Directory.</p>
+      <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj8_WindowsServer_ActiveDiectory" target="_blank">Guarda progetto</a>
+    </div>
+  </div>
 
-    setInterval(draw, 45);
+  <div class="card">
+    <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/9.png?raw=true" alt="">
+    <div class="card-content">
+      <h3>PowerShell | Nmap | SQLi</h3>
+      <p>Analisi malware, scansioni Nmap, gestione script e attacco SQL Injection.</p>
+      <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj9_PowerShell_Nmap_AnyRun_SQLi" target="_blank">Guarda progetto</a>
+    </div>
+  </div>
 
-    window.addEventListener('resize', () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    });
-  </script>
+</div>
+
+<footer>© 2025 Salvatore Gifuni – Tutti i diritti riservati</footer>
 </body>
 </html>
