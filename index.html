@@ -14,16 +14,8 @@
       color: #e0e0e0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    body {
-      position: relative;
-      z-index: 1;
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px;
-      line-height: 1.6;
-    }
-    /* Canvas Matrix */
-    canvas#matrix {
+    /* canvas */
+    #matrix {
       position: fixed;
       top: 0;
       left: 0;
@@ -32,12 +24,28 @@
       height: 100%;
       display: block;
       background: #000;
+      opacity: 0.25; /* meno invasivo */
     }
+
+    /* contenuto sopra */
+    .content {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+      line-height: 1.6;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,255,157,0.3);
+    }
+
     h1, h2 {
       font-family: 'Fira Code', monospace;
       color: #00ff9d;
       text-shadow: 0 0 8px #00ff9d, 0 0 15px #00ff9d;
     }
+    /* glitch effetto */
     h1 {
       position: relative;
       display: inline-block;
@@ -76,6 +84,7 @@
       70% { clip: rect(0, 9999px, 8px, 0); }
       100% { clip: rect(0, 9999px, 5px, 0); }
     }
+
     img {
       float: left;
       margin-right: 15px;
@@ -94,7 +103,7 @@
     li {
       margin-bottom: 25px;
       clear: both;
-      background: rgba(255,255,255,0.03);
+      background: rgba(255,255,255,0.05);
       padding: 15px;
       border-radius: 8px;
       border-left: 3px solid #00ff9d;
@@ -133,107 +142,70 @@
   </style>
 </head>
 <body>
-
 <canvas id="matrix"></canvas>
 
-<h1 data-text="📊 Portfolio CyberSecurity Specialist – Salvatore Gifuni">
-  📊 Portfolio CyberSecurity Specialist – Salvatore Gifuni
-</h1>
+<div class="content">
+  <h1 data-text="📊 Portfolio CyberSecurity Specialist – Salvatore Gifuni">
+    📊 Portfolio CyberSecurity Specialist – Salvatore Gifuni
+  </h1>
 
-<p>Questo portfolio raccoglie tutti i progetti che ho realizzato in ambito <strong>CyberSecurity</strong> durante il bootcamp di <strong>Epicode</strong>.</p>
+  <p>Questo portfolio raccoglie tutti i progetti che ho realizzato in ambito <strong>CyberSecurity</strong> durante il bootcamp di <strong>Epicode</strong>.</p>
 
-<p><strong>📚 Certificazioni Epicode:</strong><br>
-🔗 <a href="https://github.com/SalvatoreGifuni/Portfolio/blob/main/EPICODE_CS0225IT_CERT/Certificato_Finale/652696cd-f9c9-416d-a2b8-6ba49db3a51c.pdf">Certificato finale</a><br>
-🔗 <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_CERT/EPICODE_CS0225IT_CERT">Certificati singoli moduli</a>
-</p>
+  <p><strong>📚 Certificazioni Epicode:</strong><br>
+    🔗 <a href="#">Certificato finale</a><br>
+    🔗 <a href="#">Certificati singoli moduli</a>
+  </p>
 
-<hr>
+  <hr>
 
-<p><strong>👤 Per saperne di più su di me:</strong><br>
-🔗 <a href="https://github.com/SalvatoreGifuni">GitHub</a>
-</p>
+  <p><strong>👤 Per saperne di più su di me:</strong><br>
+    🔗 <a href="#">GitHub</a>
+  </p>
 
-<p><strong>💼 Guarda anche:</strong><br>
-🔗 <a href="https://github.com/SalvatoreGifuni/Portfolio_DataEng">Portfolio Data Engineering – Salvatore Gifuni</a>
-</p>
+  <p><strong>💼 Guarda anche:</strong><br>
+    🔗 <a href="#">Portfolio Data Engineering – Salvatore Gifuni</a>
+  </p>
 
-<hr>
+  <hr>
 
-<h2>📂 Progetti Principali</h2>
+  <h2>📂 Progetti Principali</h2>
+  <ul>
+    <li>
+      <img src="images/1.png" width="250" height="150" alt="">
+      <strong><a href="#">Progettazione e Configurazione VLAN</a></strong><br>
+      Configurazione di rete divisa in tre livelli per un ambiente commerciale usando VLAN, isolamento e comunicazione mirata.
+    </li>
+    <li>
+      <img src="images/2.png" width="250" height="150" alt="">
+      <strong><a href="#">Analisi di Codice e Debug</a></strong><br>
+      Debug e miglioramento dell’interfaccia assistente virtuale.
+    </li>
+    <!-- aggiungi altre li qui -->
+  </ul>
 
-<ul>
-  <li>
-    <img src="images/1.png" width="250" height="150" alt="">
-    <strong><a href="EPICODE_CS0225IT_PROJ/Proj1_VLAN">Progettazione e Configurazione di Rete VLAN Multi-Livello</a></strong><br>
-    Configurazione di rete divisa in tre livelli per un ambiente commerciale usando VLAN, isolamento e comunicazione mirata con Cisco Packet Tracer.
-  </li>
-  <li>
-    <img src="images/2.png" width="250" height="150" alt="">
-    <strong><a href="EPICODE_CS0225IT_PROJ/Proj2_AnalisiPython">Analisi di Codice e Debug di un’Interfaccia Virtuale in Python</a></strong><br>
-    Debug e miglioramento dell’interfaccia assistente virtuale con input più flessibili, guida utente e ristrutturazione del codice.
-  </li>
-  <li>
-    <img src="images/3.png" width="250" height="150" alt="">
-    <strong><a href="EPICODE_CS0225IT_PROJ/Proj3_PfSense">Simulazione Firewall con Pfsense su VirtualBox</a></strong><br>
-    Regole firewall per protezione di DVWA e scansioni di rete tra macchine Kali, Metasploitable e Pfsense.
-  </li>
-  <li>
-    <img src="images/4.png" width="250" height="150" alt="">
-    <strong><a href="EPICODE_CS0225IT_PROJ/Proj4_EmailPhishing">Simulazione spear phishing con ChatGPT e SEToolkit</a></strong><br>
-    Email phishing simulate con ChatGPT e pagina falsa di login tramite Kali Linux e SEToolkit.
-  </li>
-  <li>
-    <img src="images/5.png" width="250" height="150" alt="">
-    <strong><a href="EPICODE_CS0225IT_PROJ/Proj5_Hydra_BlaxBox_SidesVancouver">Hydra SSH/FTP Brute-Force | Exploitation Sides-Vancouver-2018</a></strong><br>
-    Attacchi a dizionario, exploit WordPress e privilege escalation tramite cronjob.
-  </li>
-  <li>
-    <img src="images/6.png" width="250" height="150" alt="">
-    <strong><a href="EPICODE_CS0225IT_PROJ/Proj6_Metasploit">Java RMI Exploit con Metasploit</a></strong><br>
-    Shell Meterpreter ottenuta da exploit RMI su Metasploitable via reverse_tcp e ricognizione post-sfruttamento.
-  </li>
-  <li>
-    <img src="images/7.png" width="250" height="150" alt="">
-    <strong><a href="EPICODE_CS0225IT_PROJ/Proj7_wireshark">Analisi traffico con Wireshark</a></strong><br>
-    Ricostruzione TCP scan e indicatori di compromissione in una rete aziendale.
-  </li>
-  <li>
-    <img src="images/8.png" width="250" height="150" alt="">
-    <strong><a href="EPICODE_CS0225IT_PROJ/Proj8_WindowsServer_ActiveDiectory">Gestione utenti, permessi e GPO su Windows Server 2022</a></strong><br>
-    Configurazione GPO, controllo accessi granulari e minimo privilegio su Active Directory.
-  </li>
-  <li>
-    <img src="images/9.png" width="250" height="150" alt="">
-    <strong><a href="EPICODE_CS0225IT_PROJ/Proj9_PowerShell_Nmap_AnyRun_SQLi">Analisi PowerShell | Malware | Nmap | SQL Injection</a></strong><br>
-    Analisi malware con Any.Run, scansioni di rete, comandi PowerShell e tracciamento SQL injection con Wireshark.
-  </li>
-</ul>
-
-<footer>
-  > SYSTEM ONLINE – Portfolio last update: <span id="date"></span>
-</footer>
+  <footer>
+    > SYSTEM ONLINE – Portfolio last update: <span id="date"></span>
+  </footer>
+</div>
 
 <script>
-  // Data aggiornamento
   document.getElementById('date').textContent = new Date().toLocaleDateString('it-IT');
 
-  // Matrix Rain Effect
   const canvas = document.getElementById('matrix');
   const ctx = canvas.getContext('2d');
   canvas.height = window.innerHeight;
   canvas.width = window.innerWidth;
 
-  const letters = "アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン";
+  const letters = "アカサタナハマヤラワガザダバパイキシチニヒミリグズブヅプエケセテネヘメレゲゼデベペオコソトノホモヨロゴゾドボポ";
   const fontSize = 16;
   const columns = canvas.width / fontSize;
   const drops = [];
-
   for (let x = 0; x < columns; x++) {
     drops[x] = 1;
   }
 
   function draw() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "#00ff9d";
     ctx.font = fontSize + "px monospace";
@@ -246,14 +218,12 @@
       drops[i]++;
     }
   }
-
-  setInterval(draw, 33);
+  setInterval(draw, 40);
 
   window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
   });
 </script>
-
 </body>
 </html>
