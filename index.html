@@ -1,277 +1,114 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio CyberSecurity - Salvatore Gifuni</title>
-  <style>
-    :root {
-      --primary: #001d3d;
-      --accent: #ff6b35;
-      --bg: #f4f6f8;
-      --text: #222;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      background-color: var(--primary);
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-    main {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    h2 {
-      color: var(--primary);
-      border-bottom: 3px solid var(--accent);
-      padding-bottom: 0.3rem;
-      font-size: 1.6rem;
-      margin-top: 2rem;
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-    }
-    .card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 1rem;
-    }
-    .card-content h3 {
-      margin: 0 0 0.5rem 0;
-      color: var(--primary);
-      font-size: 1.2rem;
-    }
-    .card-content p {
-      margin: 0;
-      font-size: 0.95rem;
-    }
-    footer {
-      text-align: center;
-      background: #e9ecef;
-      color: #555;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Portfolio CyberSecurity – Salvatore Gifuni</title>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;height:100%;background:#000;color:#e0e0e0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;overflow-x:hidden;}
+  #matrix{position:fixed;top:0;left:0;z-index:0;width:100%;height:100%;display:block;background:#000;opacity:0.25;}
+  .content{position:relative;z-index:2;max-width:1200px;margin:auto;padding:30px;}
+  h1,h2{font-family:'Fira Code',monospace;color:#00ff9d;text-shadow:0 0 8px #00ff9d,0 0 15px #00ff9d;}
+  h1{position:relative;display:inline-block;}
+  h1::before,h1::after{content:attr(data-text);position:absolute;left:0;width:100%;overflow:hidden;clip:rect(0,900px,0,0);}
+  h1::before{animation:glitchTop 2s infinite linear alternate-reverse;color:#ff00c8;text-shadow:0 0 8px #ff00c8,0 0 15px #ff00c8;}
+  h1::after{animation:glitchBottom 1.5s infinite linear alternate-reverse;color:#00fff7;text-shadow:0 0 8px #00fff7,0 0 15px #00fff7;}
+  @keyframes glitchTop{0%{clip:rect(0,9999px,0,0);}10%{clip:rect(0,9999px,8px,0);}30%{clip:rect(0,9999px,12px,0);}50%{clip:rect(0,9999px,5px,0);}70%{clip:rect(0,9999px,10px,0);}100%{clip:rect(0,9999px,6px,0);}}
+  @keyframes glitchBottom{0%{clip:rect(0,9999px,0,0);}10%{clip:rect(0,9999px,6px,0);}30%{clip:rect(0,9999px,10px,0);}50%{clip:rect(0,9999px,4px,0);}70%{clip:rect(0,9999px,8px,0);}100%{clip:rect(0,9999px,5px,0);}}
+  a{color:#00ff9d;text-decoration:none;font-family:'Fira Code',monospace;}
+  a:hover{color:#ff00c8;text-shadow:0 0 5px #ff00c8,0 0 10px #ff00c8;}
+  hr{margin:40px 0;border:none;border-top:1px solid #00ff9d;box-shadow:0 0 5px #00ff9d,0 0 15px #00ff9d;}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+  .card{background:rgba(0,0,0,0.6);border-radius:12px;box-shadow:0 0 10px rgba(0,255,157,0.3);padding:15px;transition:transform .3s,box-shadow .3s;}
+  .card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 0 15px #00ffff,inset 0 0 15px rgba(0,255,157,0.6);}
+  .card img{width:100%;border-radius:8px;box-shadow:0 0 12px #00ff9d,0 0 25px #00ff9d;transition:transform .3s;margin-bottom:10px;}
+  .card img:hover{transform:scale(1.05);}
+  footer{margin-top:50px;font-family:'Fira Code',monospace;font-size:.9em;color:#00ff9d;border-top:1px dashed #00ff9d;padding-top:10px;text-align:center;text-shadow:0 0 5px #00ff9d;}
+</style>
 </head>
 <body>
+<canvas id="matrix"></canvas>
 
-  <header>
-    <h1>Portfolio CyberSecurity</h1>
-    <p>Salvatore Gifuni – Progetti realizzati durante il Bootcamp Epicode</p>
-  </header>
+<div class="content">
+  <h1 data-text="📊 Portfolio CyberSecurity Specialist – Salvatore Gifuni">
+    📊 Portfolio CyberSecurity Specialist – Salvatore Gifuni
+  </h1>
 
-  <main>
-    <section>
-      <h2>📜 Certificazioni</h2>
-      <p>
-        🎓 Certificato finale – 
-        <a href="https://github.com/SalvatoreGifuni/Portfolio/blob/main/EPICODE_CS0225IT_CERT/Certificato_Finale/652696cd-f9c9-416d-a2b8-6ba49db3a51c.pdf" target="_blank">Visualizza PDF</a>
-      </p>
-      <p>
-        📚 Certificati moduli singoli – 
-        <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_CERT/EPICODE_CS0225IT_CERT" target="_blank">Vai ai certificati</a>
-      </p>
-    </section>
+  <p>Questo portfolio raccoglie tutti i progetti che ho realizzato in ambito <strong>CyberSecurity</strong> durante il bootcamp di <strong>Epicode</strong>.</p>
 
-    <section>
-      <h2>💼 Contatti</h2>
-      <p>
-        🔗 <a href="https://github.com/SalvatoreGifuni" target="_blank">GitHub</a> 
-        &nbsp; | &nbsp; 
-        <a href="https://salvatoregifuni.github.io/Portfolio_DataEng/" target="_blank">Portfolio Data Engineering</a>
-      </p>
-    </section>
+  <p><strong>📚 Certificazioni Epicode:</strong><br>
+    🔗 <a href="https://github.com/SalvatoreGifuni/Portfolio/blob/main/EPICODE_CS0225IT_CERT/Certificato_Finale/652696cd-f9c9-416d-a2b8-6ba49db3a51c.pdf">Certificato finale</a><br>
+    🔗 <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_CERT/EPICODE_CS0225IT_CERT">Certificati singoli moduli</a>
+  </p>
 
-    <section>
-      <h2>📂 Progetti Principali</h2>
-      <div class="cards">
+  <hr>
 
-        <!-- Progetto 1 -->
-        <div class="card">
-          <img src="https://via.placeholder.com/400x200?text=Penetration+Testing" alt="Penetration Testing">
-          <div class="card-content">
-            <h3>
-              <a href="https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/tree/main/Progetto1" target="_blank">
-                Penetration Testing su rete aziendale
-              </a>
-            </h3>
-            <p>Simulazione di attacchi controllati con report di vulnerabilità e proposte di mitigazione.</p>
-          </div>
-        </div>
+  <p><strong>👤 Per saperne di più su di me:</strong><br>
+    🔗 <a href="https://github.com/SalvatoreGifuni">GitHub</a>
+  </p>
 
-        <!-- Progetto 2 -->
-        <div class="card">
-          <img src="https://via.placeholder.com/400x200?text=Incident+Response" alt="Incident Response">
-          <div class="card-content">
-            <h3>
-              <a href="https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/tree/main/Progetto2" target="_blank">
-                Piano di Incident Response
-              </a>
-            </h3>
-            <p>Creazione di playbook e procedure operative per la gestione e l’analisi di incidenti informatici.</p>
-          </div>
-        </div>
+  <p><strong>💼 Guarda anche:</strong><br>
+    🔗 <a href="https://github.com/SalvatoreGifuni/Portfolio_DataEng">Portfolio Data Engineering – Salvatore Gifuni</a>
+  </p>
 
-        <!-- Progetto 3 -->
-        <div class="card">
-          <img src="https://via.placeholder.com/400x200?text=SIEM+Analysis" alt="Analisi Log SIEM">
-          <div class="card-content">
-            <h3>
-              <a href="https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/tree/main/Progetto3" target="_blank">
-                Analisi Log con SIEM
-              </a>
-            </h3>
-            <p>Implementazione di dashboard su Splunk per identificare anomalie e potenziali intrusioni.</p>
-          </div>
-        </div>
+  <hr>
+  <h2>📂 Progetti Principali</h2>
 
-        <!-- Progetto 4 -->
-        <div class="card">
-          <img src="https://via.placeholder.com/400x200?text=Hardening+Server" alt="Hardening Server">
-          <div class="card-content">
-            <h3>
-              <a href="https://github.com/SalvatoreGifuni/Portfolio_CyberSecurity/tree/main/Progetto4" target="_blank">
-                Hardening Server Linux
-              </a>
-            </h3>
-            <p>Applicazione di best practice di sicurezza, auditing e configurazione firewall avanzata.</p>
-          </div>
-        </div>
-
-        <!-- Progetto 5 -->
-        <div class="card">
-          <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/5.png?raw=true" alt="Hydra SSH/FTP Brute-Force">
-          <div class="card-content">
-            <h3>
-              <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj5_Hydra_BlaxBox_SidesVancouver" target="_blank">
-                Hydra SSH/FTP Brute-Force | Sides-Vancouver-2018 Exploitation
-              </a>
-            </h3>
-            <p>
-              Attacco a dizionario con Hydra su servizi SSH e FTP configurati manualmente. Accesso root a una macchina vulnerabile sfruttando FTP anonimo,
-              exploit WordPress e escalation dei privilegi via cronjob.
-            </p>
-          </div>
-        </div>
-
-        <!-- Progetto 6 -->
-        <div class="card">
-          <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/6.png?raw=true" alt="Java RMI Exploit">
-          <div class="card-content">
-            <h3>
-              <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj6_Metasploit" target="_blank">
-                Java RMI Exploit con Metasploit | Sessione Meterpreter via RCE
-              </a>
-            </h3>
-            <p>
-              Attacco RCE su servizio Java RMI aperto sulla porta 1099 utilizzando Metasploit. Ottenuta shell Meterpreter e raccolte informazioni
-              su rete e routing con payload reverse_tcp.
-            </p>
-          </div>
-        </div>
-
-        <!-- Progetto 7 -->
-        <div class="card">
-          <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/7.png?raw=true" alt="Analisi traffico Wireshark">
-          <div class="card-content">
-            <h3>
-              <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj7_wireshark" target="_blank">
-                Analisi traffico con Wireshark | TCP Scan & Indicatori di Compromissione
-              </a>
-            </h3>
-            <p>
-              Analisi di una cattura di rete per individuare attività sospette. Identificate scansioni TCP e proposte misure
-              di mitigazione contro possibili attacchi.
-            </p>
-          </div>
-        </div>
-
-        <!-- Progetto 8 -->
-        <div class="card">
-          <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/8.png?raw=true" alt="Gestione utenti Windows Server">
-          <div class="card-content">
-            <h3>
-              <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj8_WindowsServer_ActiveDiectory" target="_blank">
-                Gestione utenti, permessi e GPO su Windows Server 2022
-              </a>
-            </h3>
-            <p>
-              Creazione gruppi utenti e assegnazione permessi su cartelle condivise. Configurate Group Policy per applicare
-              sicurezza basata sul principio del minimo privilegio.
-            </p>
-          </div>
-        </div>
-
-        <!-- Progetto 9 -->
-        <div class="card">
-          <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/9.png?raw=true" alt="Analisi PowerShell e altro">
-          <div class="card-content">
-            <h3>
-              <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj9_PowerShell_Nmap_AnyRun_SQLi" target="_blank">
-                Analisi PowerShell | Analisi Malware | Nmap | SQL Injection
-              </a>
-            </h3>
-            <p>
-              Automazioni PowerShell, analisi malware dropper su ANY.RUN, esplorazioni con Nmap e studio di un attacco SQL Injection tramite Wireshark.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  </main>
+  <div class="cards">
+    <div class="card">
+      <img src="images/1.png" alt="">
+      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj1_VLAN">Progettazione e Configurazione VLAN</a></strong>
+      <p>Configurazione di rete divisa in tre livelli per un ambiente commerciale usando VLAN, isolamento e comunicazione mirata.</p>
+    </div>
+    <div class="card">
+      <img src="images/2.png" alt="">
+      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj2_AnalisiPython">Analisi di Codice e Debug</a></strong>
+      <p>Debug e miglioramento dell’interfaccia assistente virtuale.</p>
+    </div>
+    <div class="card">
+      <img src="images/3.png" alt="">
+      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj3_PfSense">Simulazione Firewall con Pfsense</a></strong>
+      <p>Creazione di un ambiente virtuale e regole firewall per separare e proteggere reti.</p>
+    </div>
+    <div class="card">
+      <img src="images/4.png" alt="">
+      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj4_EmailPhishing">Simulazione spear phishing</a></strong>
+      <p>Email personalizzate e pagina fake login per analisi social engineering.</p>
+    </div>
+    <div class="card">
+      <img src="images/5.png" alt="">
+      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj5_Hydra_BlaxBox_SidesVancouver">Hydra SSH/FTP & Exploit</a></strong>
+      <p>Attacco a dizionario su servizi SSH/FTP e sfruttamento di vulnerabilità WordPress.</p>
+    </div>
+    <div class="card">
+      <img src="images/6.png" alt="">
+      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj6_Metasploit">Java RMI Exploit</a></strong>
+      <p>Accesso tramite RCE su servizio Java RMI usando Metasploit.</p>
+    </div>
+    <div class="card">
+      <img src="images/7.png" alt="">
+      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj7_wireshark">Analisi traffico con Wireshark</a></strong>
+      <p>Individuazione scansione TCP e indicatori di compromissione.</p>
+    </div>
+    <div class="card">
+      <img src="images/8.png" alt="">
+      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj8_WindowsServer_ActiveDiectory">Gestione utenti e GPO</a></strong>
+      <p>Permessi specifici e Group Policy su Windows Server 2022.</p>
+    </div>
+    <div class="card">
+      <img src="images/9.png" alt="">
+      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj9_PowerShell_Nmap_AnyRun_SQLi">PowerShell | Nmap | SQLi</a></strong>
+      <p>Automazione, analisi malware, scansione reti e SQL Injection.</p>
+    </div>
+  </div>
 
   <footer>
-    © 2025 Salvatore Gifuni – Portfolio CyberSecurity
+    > SYSTEM ONLINE – Portfolio last update: <span id="date"></span>
   </footer>
+</div>
 
-</body>
-</html>
+<script>
+document.getElementById('date').textContent = new Date().toLocaleDateString('it-IT');
+const canvas=document.getElementById('matrix');const ctx=canvas.getContext('2d');canvas.height=window.innerHeight;canvas.width=window.innerWidth;
+const letters="アカサタナハマヤラワガザダバパイキシチニヒミリグズブヅプエケセテネヘメレゲゼデベペオコソトノホモヨロゴゾドボポ";
+const fontSize=16;const columns=canvas.width/fontSize;const drops=[];for(let x=0;x<columns;x++){
