@@ -2,18 +2,32 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio CyberSecurity – Salvatore Gifuni</title>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-dark: #0a0a1a;
+      --accent1: #9d4edd;
+      --accent2: #6c63ff;
+      --accent3: #ff4edb;
+      --text-light: #e0e0f5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow-x: hidden;
-      background-color: #0a0a1a;
-      color: #e0e0f5;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
     #matrix {
       position: fixed;
       top: 0;
@@ -21,9 +35,10 @@
       z-index: 0;
       width: 100%;
       height: 100%;
-      background: #0a0a1a;
+      background: var(--bg-dark);
       opacity: 0.18;
     }
+
     .content {
       position: relative;
       z-index: 2;
@@ -34,11 +49,14 @@
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(138,43,226,0.4);
     }
+
     h1, h2 {
       font-family: 'Fira Code', monospace;
-      color: #9d4edd;
-      text-shadow: 0 0 10px #6c63ff;
+      color: var(--accent1);
+      text-shadow: 0 0 10px var(--accent2);
+      margin-top: 0;
     }
+
     h1 {
       position: relative;
       display: inline-block;
@@ -53,14 +71,15 @@
     }
     h1::before {
       animation: glitchTop 2s infinite linear alternate-reverse;
-      color: #ff4edb;
-      text-shadow: 0 0 8px #ff4edb;
+      color: var(--accent3);
+      text-shadow: 0 0 8px var(--accent3);
     }
     h1::after {
       animation: glitchBottom 1.5s infinite linear alternate-reverse;
-      color: #6c63ff;
-      text-shadow: 0 0 8px #6c63ff;
+      color: var(--accent2);
+      text-shadow: 0 0 8px var(--accent2);
     }
+
     @keyframes glitchTop {
       0% { clip: rect(0,9999px,0,0); }
       20% { clip: rect(0,9999px,8px,0); }
@@ -77,30 +96,43 @@
       80% { clip: rect(0,9999px,7px,0); }
       100% { clip: rect(0,9999px,3px,0); }
     }
+
     a {
-      color: #6c63ff;
+      color: var(--accent2);
       text-decoration: none;
       font-family: 'Fira Code', monospace;
     }
     a:hover {
-      color: #ff4edb;
-      text-shadow: 0 0 5px #ff4edb;
+      color: var(--accent3);
+      text-shadow: 0 0 5px var(--accent3);
     }
-    hr {
-      margin: 40px 0;
+
+    .section-title {
+      font-family: 'Fira Code', monospace;
+      color: var(--accent1);
+      text-shadow: 0 0 10px var(--accent2);
+      margin-top: 40px;
+      margin-bottom: 10px;
+      font-size: 1.6em;
+    }
+    .section-line {
+      height: 2px;
+      background: linear-gradient(to right, var(--accent2), var(--accent1), var(--accent3));
       border: none;
-      border-top: 1px solid #9d4edd;
-      box-shadow: 0 0 6px #6c63ff;
+      margin-bottom: 20px;
+      box-shadow: 0 0 8px var(--accent2);
     }
+
     footer {
       margin-top: 50px;
       font-family: 'Fira Code', monospace;
       font-size: 0.9em;
-      color: #9d4edd;
-      border-top: 1px dashed #6c63ff;
+      color: var(--accent1);
+      border-top: 1px dashed var(--accent2);
       padding-top: 10px;
       text-align: center;
     }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -109,8 +141,8 @@
     }
     .card {
       background: rgba(255,255,255,0.03);
-      border-left: 3px solid #9d4edd;
-      box-shadow: 0 0 8px #6c63ff;
+      border-left: 3px solid var(--accent1);
+      box-shadow: 0 0 8px var(--accent2);
       border-radius: 10px;
       overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
@@ -119,14 +151,13 @@
     }
     .card:hover {
       transform: scale(1.03);
-      box-shadow: 0 0 15px #ff4edb;
+      box-shadow: 0 0 15px var(--accent3);
     }
     .card img {
       width: 100%;
       height: 160px;
       object-fit: cover;
       display: block;
-      box-shadow: none;
       border-radius: 0;
       margin: 0;
       transition: transform 0.3s;
@@ -150,20 +181,25 @@
     Portfolio CyberSecurity Specialist – Salvatore Gifuni
   </h1>
 
-  <p>Questo portfolio raccoglie tutti i progetti che ho realizzato in ambito <strong>CyberSecurity</strong> durante il bootcamp di <strong>Epicode</strong>.</p>
-
-  <p><strong>📚 Certificazioni Epicode:</strong><br>
+  <!-- CERTIFICAZIONI -->
+  <h2 class="section-title">📜 Certificazioni Epicode</h2>
+  <hr class="section-line">
+  <p>
     🔗 <a href="https://github.com/SalvatoreGifuni/Portfolio/blob/main/EPICODE_CS0225IT_CERT/Certificato_Finale/652696cd-f9c9-416d-a2b8-6ba49db3a51c.pdf" target="_blank">Certificato finale</a><br>
     🔗 <a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_CERT/EPICODE_CS0225IT_CERT" target="_blank">Certificati singoli moduli</a>
   </p>
 
-  <section>
-  <p><strong>💼 Per saperne di più</strong><br>
-    🔗 <a href="https://github.com/SalvatoreGifuni" target="_blank">GitHub</a> | &nbsp; <a href="https://salvatoregifuni.github.io/Portfolio_DataEng/" target="_blank">Portfolio Data Engineering</a></p>
-  </section>
-  
-  <section>
-  <h2>📂 Progetti Principali</h2>
+  <!-- PER SAPERNE DI PIÙ -->
+  <h2 class="section-title">💼 Per saperne di più</h2>
+  <hr class="section-line">
+  <p>
+    🔗 <a href="https://github.com/SalvatoreGifuni" target="_blank">GitHub</a> | &nbsp;
+    <a href="https://salvatoregifuni.github.io/Portfolio_DataEng/" target="_blank">Portfolio Data Engineering</a>
+  </p>
+
+  <!-- PROGETTI -->
+  <h2 class="section-title">📂 Progetti Principali</h2>
+  <hr class="section-line">
 
   <div class="cards">
 
@@ -245,7 +281,6 @@
     > SYSTEM ONLINE – Portfolio last update: <span id="date"></span>
   </footer>
 </div>
-</section>
 
 <script>
   document.getElementById('date').textContent = new Date().toLocaleDateString('it-IT');
@@ -257,7 +292,7 @@
 
   const letters = "01ΣΨΦΩΞλµ";
   const fontSize = 16;
-  let columns = canvas.width / fontSize;
+  let columns = Math.floor(canvas.width / fontSize);
   const drops = [];
   for (let x = 0; x < columns; x++) drops[x] = 1;
 
@@ -280,7 +315,9 @@
   window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
-    columns = canvas.width / fontSize;
+    columns = Math.floor(canvas.width / fontSize);
+    drops.length = 0;
+    for (let x = 0; x < columns; x++) drops[x] = 1;
   });
 </script>
 </body>
