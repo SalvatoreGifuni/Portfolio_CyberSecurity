@@ -1,30 +1,146 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<title>Portfolio CyberSecurity – Salvatore Gifuni</title>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  html,body{margin:0;padding:0;height:100%;background:#000;color:#e0e0e0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;overflow-x:hidden;}
-  #matrix{position:fixed;top:0;left:0;z-index:0;width:100%;height:100%;display:block;background:#000;opacity:0.25;}
-  .content{position:relative;z-index:2;max-width:1200px;margin:auto;padding:30px;}
-  h1,h2{font-family:'Fira Code',monospace;color:#00ff9d;text-shadow:0 0 8px #00ff9d,0 0 15px #00ff9d;}
-  h1{position:relative;display:inline-block;}
-  h1::before,h1::after{content:attr(data-text);position:absolute;left:0;width:100%;overflow:hidden;clip:rect(0,900px,0,0);}
-  h1::before{animation:glitchTop 2s infinite linear alternate-reverse;color:#ff00c8;text-shadow:0 0 8px #ff00c8,0 0 15px #ff00c8;}
-  h1::after{animation:glitchBottom 1.5s infinite linear alternate-reverse;color:#00fff7;text-shadow:0 0 8px #00fff7,0 0 15px #00fff7;}
-  @keyframes glitchTop{0%{clip:rect(0,9999px,0,0);}10%{clip:rect(0,9999px,8px,0);}30%{clip:rect(0,9999px,12px,0);}50%{clip:rect(0,9999px,5px,0);}70%{clip:rect(0,9999px,10px,0);}100%{clip:rect(0,9999px,6px,0);}}
-  @keyframes glitchBottom{0%{clip:rect(0,9999px,0,0);}10%{clip:rect(0,9999px,6px,0);}30%{clip:rect(0,9999px,10px,0);}50%{clip:rect(0,9999px,4px,0);}70%{clip:rect(0,9999px,8px,0);}100%{clip:rect(0,9999px,5px,0);}}
-  a{color:#00ff9d;text-decoration:none;font-family:'Fira Code',monospace;}
-  a:hover{color:#ff00c8;text-shadow:0 0 5px #ff00c8,0 0 10px #ff00c8;}
-  hr{margin:40px 0;border:none;border-top:1px solid #00ff9d;box-shadow:0 0 5px #00ff9d,0 0 15px #00ff9d;}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
-  .card{background:rgba(0,0,0,0.6);border-radius:12px;box-shadow:0 0 10px rgba(0,255,157,0.3);padding:15px;transition:transform .3s,box-shadow .3s;}
-  .card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 0 15px #00ffff,inset 0 0 15px rgba(0,255,157,0.6);}
-  .card img{width:100%;border-radius:8px;box-shadow:0 0 12px #00ff9d,0 0 25px #00ff9d;transition:transform .3s;margin-bottom:10px;}
-  .card img:hover{transform:scale(1.05);}
-  footer{margin-top:50px;font-family:'Fira Code',monospace;font-size:.9em;color:#00ff9d;border-top:1px dashed #00ff9d;padding-top:10px;text-align:center;text-shadow:0 0 5px #00ff9d;}
-</style>
+  <meta charset="UTF-8">
+  <title>Portfolio CyberSecurity – Salvatore Gifuni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+      background-color: #0a0a1a;
+      color: #e0e0f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #matrix {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background: #0a0a1a;
+      opacity: 0.18;
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(10, 10, 26, 0.85);
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(138,43,226,0.4);
+    }
+    h1, h2 {
+      font-family: 'Fira Code', monospace;
+      color: #9d4edd;
+      text-shadow: 0 0 10px #6c63ff;
+    }
+    h1 {
+      position: relative;
+      display: inline-block;
+    }
+    h1::before, h1::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+    }
+    h1::before {
+      animation: glitchTop 2s infinite linear alternate-reverse;
+      color: #ff4edb;
+      text-shadow: 0 0 8px #ff4edb;
+    }
+    h1::after {
+      animation: glitchBottom 1.5s infinite linear alternate-reverse;
+      color: #6c63ff;
+      text-shadow: 0 0 8px #6c63ff;
+    }
+    @keyframes glitchTop {
+      0% { clip: rect(0,9999px,0,0); }
+      20% { clip: rect(0,9999px,8px,0); }
+      40% { clip: rect(0,9999px,6px,0); }
+      60% { clip: rect(0,9999px,12px,0); }
+      80% { clip: rect(0,9999px,4px,0); }
+      100% { clip: rect(0,9999px,5px,0); }
+    }
+    @keyframes glitchBottom {
+      0% { clip: rect(0,9999px,0,0); }
+      20% { clip: rect(0,9999px,6px,0); }
+      40% { clip: rect(0,9999px,10px,0); }
+      60% { clip: rect(0,9999px,5px,0); }
+      80% { clip: rect(0,9999px,7px,0); }
+      100% { clip: rect(0,9999px,3px,0); }
+    }
+    a {
+      color: #6c63ff;
+      text-decoration: none;
+      font-family: 'Fira Code', monospace;
+    }
+    a:hover {
+      color: #ff4edb;
+      text-shadow: 0 0 5px #ff4edb;
+    }
+    hr {
+      margin: 40px 0;
+      border: none;
+      border-top: 1px solid #9d4edd;
+      box-shadow: 0 0 6px #6c63ff;
+    }
+    footer {
+      margin-top: 50px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.9em;
+      color: #9d4edd;
+      border-top: 1px dashed #6c63ff;
+      padding-top: 10px;
+      text-align: center;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      background: rgba(255,255,255,0.03);
+      border-left: 3px solid #9d4edd;
+      box-shadow: 0 0 8px #6c63ff;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px #ff4edb;
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+      box-shadow: none;
+      border-radius: 0;
+      margin: 0;
+      transition: transform 0.3s;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-content strong {
+      display: block;
+      margin-bottom: 8px;
+      font-family: 'Fira Code', monospace;
+      font-size: 1.05em;
+    }
+  </style>
 </head>
 <body>
 <canvas id="matrix"></canvas>
@@ -52,54 +168,83 @@
   </p>
 
   <hr>
+
   <h2>📂 Progetti Principali</h2>
 
   <div class="cards">
+
     <div class="card">
-      <img src="images/1.png" alt="">
-      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj1_VLAN">Progettazione e Configurazione VLAN</a></strong>
-      <p>Configurazione di rete divisa in tre livelli per un ambiente commerciale usando VLAN, isolamento e comunicazione mirata.</p>
+      <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/1.png?raw=true" alt="VLAN">
+      <div class="card-content">
+        <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj1_VLAN">Progettazione e Configurazione VLAN</a></strong>
+        Configurazione di rete divisa in tre livelli per un ambiente commerciale usando VLAN, isolamento e comunicazione mirata.
+      </div>
     </div>
+
     <div class="card">
-      <img src="images/2.png" alt="">
-      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj2_AnalisiPython">Analisi di Codice e Debug</a></strong>
-      <p>Debug e miglioramento dell’interfaccia assistente virtuale.</p>
+      <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/2.png?raw=true" alt="Analisi Codice">
+      <div class="card-content">
+        <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj2_AnalisiPython">Analisi di Codice e Debug</a></strong>
+        Debug e miglioramento dell’interfaccia assistente virtuale.
+      </div>
     </div>
+
     <div class="card">
-      <img src="images/3.png" alt="">
-      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj3_PfSense">Simulazione Firewall con Pfsense</a></strong>
-      <p>Creazione di un ambiente virtuale e regole firewall per separare e proteggere reti.</p>
+      <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/3.png?raw=true" alt="Pfsense Firewall">
+      <div class="card-content">
+        <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj3_PfSense">Simulazione Firewall con Pfsense</a></strong>
+        Ambiente virtuale con VirtualBox, regole firewall per bloccare traffico indesiderato.
+      </div>
     </div>
+
     <div class="card">
-      <img src="images/4.png" alt="">
-      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj4_EmailPhishing">Simulazione spear phishing</a></strong>
-      <p>Email personalizzate e pagina fake login per analisi social engineering.</p>
+      <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/4.png?raw=true" alt="Phishing">
+      <div class="card-content">
+        <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj4_EmailPhishing">Simulazione spear phishing</a></strong>
+        Email personalizzate, raccolta credenziali su ambiente sicuro.
+      </div>
     </div>
+
     <div class="card">
-      <img src="images/5.png" alt="">
-      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj5_Hydra_BlaxBox_SidesVancouver">Hydra SSH/FTP & Exploit</a></strong>
-      <p>Attacco a dizionario su servizi SSH/FTP e sfruttamento di vulnerabilità WordPress.</p>
+      <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/5.png?raw=true" alt="Hydra">
+      <div class="card-content">
+        <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj5_Hydra_BlaxBox_SidesVancouver">Hydra SSH/FTP Exploitation</a></strong>
+        Attacco a dizionario con Hydra, exploit WordPress, escalation privilegi.
+      </div>
     </div>
+
     <div class="card">
-      <img src="images/6.png" alt="">
-      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj6_Metasploit">Java RMI Exploit</a></strong>
-      <p>Accesso tramite RCE su servizio Java RMI usando Metasploit.</p>
+      <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/6.png?raw=true" alt="Metasploit">
+      <div class="card-content">
+        <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj6_Metasploit">Java RMI Exploit con Metasploit</a></strong>
+        Sessione Meterpreter tramite RCE su servizio Java RMI.
+      </div>
     </div>
+
     <div class="card">
-      <img src="images/7.png" alt="">
-      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj7_wireshark">Analisi traffico con Wireshark</a></strong>
-      <p>Individuazione scansione TCP e indicatori di compromissione.</p>
+      <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/7.png?raw=true" alt="Wireshark">
+      <div class="card-content">
+        <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj7_wireshark">Analisi traffico con Wireshark</a></strong>
+        Rilevazione scansioni TCP e indicatori compromissione.
+      </div>
     </div>
+
     <div class="card">
-      <img src="images/8.png" alt="">
-      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj8_WindowsServer_ActiveDiectory">Gestione utenti e GPO</a></strong>
-      <p>Permessi specifici e Group Policy su Windows Server 2022.</p>
+      <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/8.png?raw=true" alt="Windows Server">
+      <div class="card-content">
+        <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj8_WindowsServer_ActiveDiectory">Gestione utenti e GPO</a></strong>
+        Configurazione utenti, permessi e group policy su Windows Server 2022.
+      </div>
     </div>
+
     <div class="card">
-      <img src="images/9.png" alt="">
-      <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj9_PowerShell_Nmap_AnyRun_SQLi">PowerShell | Nmap | SQLi</a></strong>
-      <p>Automazione, analisi malware, scansione reti e SQL Injection.</p>
+      <img src="https://github.com/SalvatoreGifuni/Portfolio/blob/main/images/9.png?raw=true" alt="PowerShell Nmap SQLi">
+      <div class="card-content">
+        <strong><a href="https://github.com/SalvatoreGifuni/Portfolio/tree/main/EPICODE_CS0225IT_PROJ/Proj9_PowerShell_Nmap_AnyRun_SQLi">PowerShell | Nmap | SQL Injection</a></strong>
+        Analisi malware, scanning reti e individuazione SQLi.
+      </div>
     </div>
+
   </div>
 
   <footer>
@@ -108,13 +253,40 @@
 </div>
 
 <script>
-document.getElementById('date').textContent = new Date().toLocaleDateString('it-IT');
-const canvas=document.getElementById('matrix');const ctx=canvas.getContext('2d');canvas.height=window.innerHeight;canvas.width=window.innerWidth;
-const letters="アカサタナハマヤラワガザダバパイキシチニヒミリグズブヅプエケセテネヘメレゲゼデベペオコソトノホモヨロゴゾドボポ";
-const fontSize=16;const columns=canvas.width/fontSize;const drops=[];for(let x=0;x<columns;x++){drops[x]=1;}
-function draw(){ctx.fillStyle="rgba(0,0,0,0.08)";ctx.fillRect(0,0,canvas.width,canvas.height);ctx.fillStyle="#00ff9d";ctx.font=fontSize+"px monospace";for(let i=0;i<drops.length;i++){const text=letters.charAt(Math.floor(Math.random()*letters.length));ctx.fillText(text,i*fontSize,drops[i]*fontSize);if(drops[i]*fontSize>canvas.height&&Math.random()>0.975){drops[i]=0;}drops[i]++;}}
-setInterval(draw,40);
-window.addEventListener('resize',()=>{canvas.height=window.innerHeight;canvas.width=window.innerWidth;});
+  document.getElementById('date').textContent = new Date().toLocaleDateString('it-IT');
+
+  const canvas = document.getElementById('matrix');
+  const ctx = canvas.getContext('2d');
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+
+  const letters = "01ΣΨΦΩΞλµ";
+  const fontSize = 16;
+  let columns = canvas.width / fontSize;
+  const drops = [];
+  for (let x = 0; x < columns; x++) drops[x] = 1;
+
+  function draw() {
+    ctx.fillStyle = "rgba(10,10,26,0.07)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#6c63ff";
+    ctx.font = fontSize + "px monospace";
+    for (let i = 0; i < drops.length; i++) {
+      const text = letters.charAt(Math.floor(Math.random() * letters.length));
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+  setInterval(draw, 50);
+
+  window.addEventListener('resize', () => {
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    columns = canvas.width / fontSize;
+  });
 </script>
 </body>
 </html>
